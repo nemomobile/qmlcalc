@@ -79,7 +79,7 @@
         State {
             name: "pressed"; when: mouseArea.pressed == true
             PropertyChanges { target: shade; opacity: .4 }
-            PropertyChanges { target: shade; scale: 1.2 }
+            PropertyChanges { target: shade; scale: 1.5 }
             PropertyChanges { target: button; z: 1 }
         },
 
@@ -87,7 +87,7 @@
             name: "toggled"
             when: calcwindow.displayOperation == button.operation && button.togglable
             PropertyChanges { target: shade; opacity: .6 }
-            PropertyChanges { target: shade; scale: 1.5 }
+            PropertyChanges { target: shade; scale: 1.8 }
         }
      ]
 
@@ -95,12 +95,12 @@
          NumberAnimation {
             properties: "z,scale";
             easing.type: Easing.OutExpo;
-            duration: 400
+            duration: 200
          }
          NumberAnimation {
             properties: "opacity";
             easing.type: Easing.OutExpo;
-            duration: 400
+            duration: 300
          }
      }
  }

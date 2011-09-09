@@ -73,7 +73,7 @@
                  Display {
                      id: display
                      width: box.width-3
-                     height: 300
+                     height: 150
                  }
 
                  Rectangle {
