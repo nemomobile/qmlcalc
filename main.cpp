@@ -6,9 +6,9 @@ int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
     QDeclarativeView view;
-    view.setSource(QUrl::fromLocalFile("./main.qml"));
+    view.setSource(QUrl("qrc:/qml/main.qml"));
     view.setResizeMode(QDeclarativeView::SizeRootObjectToView);
 //    view.setViewport(new QGLWidget);
-    view.show();
+    view.showFullScreen();
     return a.exec();
 }

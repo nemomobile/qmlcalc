@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>CalcButton.qml</file>
+        <file>Display.qml</file>
+        <file>main.qml</file>
+    </qresource>
+    <qresource prefix="/js">
+        <file>calculator.js</file>
+    </qresource>
+</RCC>

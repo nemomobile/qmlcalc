@@ -11,3 +11,16 @@ INCLUDEPATH += .
 
 # Input
 SOURCES += main.cpp
+
+RESOURCES += \
+    res.qrc
+
+OTHER_FILES += \
+    calculator.js \
+    main.qml \
+    Display.qml \
+    CalcButton.qml
+
+
+target.path = /usr/local/bin
+INSTALLS += target

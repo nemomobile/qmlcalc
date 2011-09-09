@@ -40,7 +40,7 @@
  ****************************************************************************/ 
 
  import QtQuick 1.1
- import "calculator.js" as CalcEngine
+ import "qrc:/js/calculator.js" as CalcEngine
 
  Item {
      Text {
@@ -63,7 +63,7 @@
              right: leftArrowButton.left }
         text: calcwindow.displayOperation
      }
-     Button {
+     CalcButton {
         id: leftArrowButton
         width: height;
         height: parent.height * 0.6;
