@@ -1,0 +1,13 @@
+Source: qmlcalc
+Section: user/Other
+Priority: extra
+Maintainer: Robin Burchell <robin+qmlcalc@viroteck.net>
+Build-Depends: debhelper (>= 7), dpatch
+Standards-Version: 3.8.4
+Homepage: <insert the upstream URL, if relevant>
+
+Package: qmlcalc
+Architecture: any
+Depends: qt-components, ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
