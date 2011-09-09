@@ -1,0 +1,5 @@
+- adaptive text size based on number of digits, similar to Harmattan
+  (doable by a second Text, visible: false, check paintedWidth until it fits)
+- key bindings for hardware keyboards
+- showing active operation when inserting second operand, if possible?
+- make equals button look exciting when it can be used
