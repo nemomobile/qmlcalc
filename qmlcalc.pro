@@ -22,5 +22,5 @@ OTHER_FILES += \
     CalcButton.qml
 
 
-target.path = /usr/local/bin
+target.path = /usr/bin
 INSTALLS += target
