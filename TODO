@@ -3,3 +3,5 @@
 - key bindings for hardware keyboards
 - showing active operation when inserting second operand, if possible?
 - make equals button look exciting when it can be used
+- settings/'advanced mode' somehow? needs to be very non-intrusive into the UI,
+  maybe approach with different layouts, switchable using a swipe?
