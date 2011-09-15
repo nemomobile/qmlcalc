@@ -24,3 +24,8 @@ OTHER_FILES += \
 
 target.path = /usr/bin
 INSTALLS += target
+
+desktop.path = /usr/share/applications
+desktop.files = qmlcalc.desktop
+INSTALLS += desktop
+
