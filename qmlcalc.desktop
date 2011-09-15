@@ -3,5 +3,5 @@ Type=Application
 Name=Calculator
 Categories=Applications
 Exec=/usr/bin/qmlcalc
-Icon=icon-i-calculator.svg
+Icon=icon-l-calculator
 
