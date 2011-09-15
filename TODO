@@ -5,3 +5,5 @@
 - make equals button look exciting when it can be used
 - settings/'advanced mode' somehow? needs to be very non-intrusive into the UI,
   maybe approach with different layouts, switchable using a swipe?
+- change .desktop to use single instance mode somehow
+- method to minimise (due to CE lacking swipe)
