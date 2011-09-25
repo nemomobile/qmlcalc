@@ -42,17 +42,46 @@
  import QtQuick 1.1
  import "qrc:/js/calculator.js" as CalcEngine
 
- Item {
-     Text {
-         id: displayText
-         anchors {
-             right: operationText.left; rightMargin: 6;
-             left: parent.left; leftMargin: 6;
-             verticalCenter: parent.verticalCenter; verticalCenterOffset: -1
-         }
-         font.pixelSize: parent.height * .6; text: calcwindow.displayText; horizontalAlignment: Text.AlignRight; elide: Text.ElideRight
-         color: "#FF8600"; smooth: true; font.bold: true
-     }
+Item {
+    Text {
+        id: displayText
+        text: calcwindow.displayText;
+        color: "#FF8600"; smooth: true; font.bold: true
+        Component.onCompleted: refitText()
+        horizontalAlignment: Text.AlignRight;
+        verticalAlignment: Text.AlignVCenter;
+        anchors {
+            right: operationText.left
+            rightMargin: 6
+            left: parent.left
+            top: parent.top
+            bottom: parent.bottom
+        }
+
+        property int minimumSize: 8
+
+        onWidthChanged: refitText()
+        onHeightChanged: refitText()
+        onTextChanged: refitText()
+
+        function refitText() {
+            console.log("refit: ", width, paintedWidth, height, paintedHeight)
+            if (paintedHeight == -1 || paintedWidth == -1)
+                return
+
+            while (paintedWidth > width || paintedHeight > height) {
+                if (--font.pixelSize <= minimumSize || font.pixelSize <= 0)
+                    break
+            }
+
+            while (paintedWidth < width && paintedHeight < height) {
+                font.pixelSize++
+            }
+
+            font.pixelSize--
+        }
+    }
+
      Text {
         id: operationText
         font.bold: true; font.pixelSize: parent.height * .7
@@ -63,6 +92,7 @@
              right: leftArrowButton.left }
         text: calcwindow.displayOperation
      }
+
      CalcButton {
         id: leftArrowButton
         width: height;
@@ -73,5 +103,5 @@
             verticalCenter: parent.verticalCenter; verticalCenterOffset: -1
         }
      }
- }
 
+}
