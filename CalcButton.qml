@@ -47,7 +47,6 @@
      property alias operation: buttonText.text
      property alias color: buttonText.color
      property bool togglable: false
-     property bool toggled: false
 
      signal clicked
 
