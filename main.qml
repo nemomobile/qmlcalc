@@ -109,17 +109,17 @@
                      CalcButton { width: grid.w; height: grid.h; operation: "-"; togglable: true }
                      CalcButton { width: grid.w; height: grid.h; operation: "+"; togglable: true }
 
-                     CalcButton { width: grid.w; height: grid.h; operation: "1"; }
-                     CalcButton { width: grid.w; height: grid.h; operation: "2"; }
-                     CalcButton { width: grid.w; height: grid.h; operation: "3"; }
+                     CalcButton { width: grid.w; height: grid.h; operation: "7"; }
+                     CalcButton { width: grid.w; height: grid.h; operation: "8"; }
+                     CalcButton { width: grid.w; height: grid.h; operation: "9"; }
 
                      CalcButton { width: grid.w; height: grid.h; operation: "4"; }
                      CalcButton { width: grid.w; height: grid.h; operation: "5"; }
                      CalcButton { width: grid.w; height: grid.h; operation: "6"; }
 
-                     CalcButton { width: grid.w; height: grid.h; operation: "7"; }
-                     CalcButton { width: grid.w; height: grid.h; operation: "8"; }
-                     CalcButton { width: grid.w; height: grid.h; operation: "9"; }
+                     CalcButton { width: grid.w; height: grid.h; operation: "1"; }
+                     CalcButton { width: grid.w; height: grid.h; operation: "2"; }
+                     CalcButton { width: grid.w; height: grid.h; operation: "3"; }
 
                      CalcButton { width: grid.w; height: grid.h; operation: "0"; }
                      CalcButton { width: grid.w; height: grid.h; operation: "." }
