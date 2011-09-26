@@ -91,17 +91,49 @@
         }
      ]
 
-     transitions: Transition {
-         NumberAnimation {
-            properties: "z,scale";
-            easing.type: Easing.OutExpo;
-            duration: 200
-         }
-         NumberAnimation {
-            properties: "opacity";
-            easing.type: Easing.OutExpo;
-            duration: 300
-         }
-     }
+     transitions: [
+        Transition {
+            from: ""
+            to: "pressed"
+            NumberAnimation {
+               properties: "z,scale";
+               easing.type: Easing.OutExpo;
+               duration: 50
+            }
+            NumberAnimation {
+               properties: "opacity";
+               easing.type: Easing.OutExpo;
+               duration: 100
+            }
+        },
+        Transition {
+            from: "pressed"
+            to: ""
+            NumberAnimation {
+               properties: "z,scale";
+               easing.type: Easing.OutExpo;
+               duration: 200
+            }
+            NumberAnimation {
+               properties: "opacity";
+               easing.type: Easing.OutExpo;
+               duration: 300
+            }
+        },
+        Transition {
+            from: "pressed"
+            to: "toggled"
+            NumberAnimation {
+               properties: "z,scale";
+               easing.type: Easing.OutExpo;
+               duration: 200
+            }
+            NumberAnimation {
+               properties: "opacity";
+               easing.type: Easing.OutExpo;
+               duration: 300
+            }
+        }
+     ]
  }
 
