@@ -63,15 +63,6 @@
              state: "orientation Portrait"
              //+ runtime.orientation
 
-
-         CalcButton {
-             // quit button
-             width: grid.w; height: grid.h; operation: "x";
-            anchors.top: parent.top
-            anchors.left: parent.left
-            onClicked: Qt.quit()
-         }
-
              width: parent.width; height: parent.height; anchors.centerIn: parent
 
              Column {
