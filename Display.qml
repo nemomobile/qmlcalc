@@ -65,7 +65,6 @@ Item {
         onTextChanged: refitText()
 
         function refitText() {
-            console.log("refit: ", width, paintedWidth, height, paintedHeight)
             if (paintedHeight == -1 || paintedWidth == -1)
                 return
 
