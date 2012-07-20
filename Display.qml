@@ -1,4 +1,4 @@
- /****************************************************************************
+/****************************************************************************
  **
  ** Copyright (C) 2011 Nokia Corporation and/or its subsidiary(-ies).
  ** All rights reserved.
@@ -39,8 +39,8 @@
  **
  ****************************************************************************/ 
 
- import QtQuick 1.1
- import "qrc:/js/calculator.js" as CalcEngine
+import QtQuick 1.1
+import "qrc:/js/calculator.js" as CalcEngine
 
 Item {
     Text {
@@ -81,18 +81,19 @@ Item {
         }
     }
 
-     Text {
+    Text {
         id: operationText
         font.bold: true; font.pixelSize: parent.height * .7
         color: "#CD6600"; smooth: true
         anchors {
-             leftMargin: 6;
-             verticalCenterOffset: -3; verticalCenter: parent.verticalCenter;
-             right: leftArrowButton.left }
+            leftMargin: 6;
+            verticalCenterOffset: -3; verticalCenter: parent.verticalCenter;
+            right: leftArrowButton.left
+        }
         text: calcwindow.displayOperation
-     }
+    }
 
-     CalcButton {
+    CalcButton {
         id: leftArrowButton
         width: height;
         height: parent.height * 0.6;
@@ -101,6 +102,5 @@ Item {
             right: parent.right; rightMargin: 6
             verticalCenter: parent.verticalCenter; verticalCenterOffset: -1
         }
-     }
-
+    }
 }
