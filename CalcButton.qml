@@ -1,4 +1,4 @@
- /****************************************************************************
+/****************************************************************************
  **
  ** Copyright (C) 2011 Nokia Corporation and/or its subsidiary(-ies).
  ** All rights reserved.
@@ -39,65 +39,65 @@
  **
  ****************************************************************************/
 
- import QtQuick 1.1
+import QtQuick 1.1
 
- Item {
-     id: button
+Item {
+    id: button
 
-     property alias operation: buttonText.text
-     property alias color: buttonText.color
-     property bool togglable: false
+    property alias operation: buttonText.text
+    property alias color: buttonText.color
+    property bool togglable: false
 
-     signal clicked
+    signal clicked
 
-     Text {
-         id: buttonText
-         anchors.centerIn: parent; anchors.verticalCenterOffset: -1
-         font.pixelSize: parent.width > parent.height ? parent.height * .5 : parent.width * .5
-         style: Text.Sunken; color: "white"; styleColor: Qt.lighter(color, 1.2); smooth: true
+    Text {
+        id: buttonText
+        anchors.centerIn: parent; anchors.verticalCenterOffset: -1
+        font.pixelSize: parent.width > parent.height ? parent.height * .5 : parent.width * .5
+        style: Text.Sunken; color: "white"; styleColor: Qt.lighter(color, 1.2); smooth: true
 
-         Rectangle {
-             id: shade
-             anchors.centerIn: parent;
-             width: (parent.width > parent.height) ? parent.width : parent.height
-             height: width
-             radius: 20; color: "#63B8FF"; opacity: 0
-         }
-     }
-
-     MouseArea {
-         id: mouseArea
-         anchors.fill: parent
-         onClicked: {
-             doOp(operation)
-             button.clicked()
-         }
-     }
-
-     states: [
-        State {
-            name: "pressed"; when: mouseArea.pressed == true
-            PropertyChanges { target: shade; opacity: .4 }
-            PropertyChanges { target: shade; scale: 1.5 }
-            PropertyChanges { target: button; z: 1 }
-        },
-
-        State {
-            name: "toggled"
-            when: calcwindow.displayOperation == button.operation && button.togglable
-            PropertyChanges { target: shade; opacity: .6 }
-            PropertyChanges { target: shade; scale: 1.8 }
+        Rectangle {
+            id: shade
+            anchors.centerIn: parent;
+            width: (parent.width > parent.height) ? parent.width : parent.height
+            height: width
+            radius: 20; color: "#63B8FF"; opacity: 0
         }
-     ]
+    }
 
-     transitions: [
+    MouseArea {
+        id: mouseArea
+        anchors.fill: parent
+        onClicked: {
+            doOp(operation)
+            button.clicked()
+        }
+    }
+
+    states: [
+       State {
+           name: "pressed"; when: mouseArea.pressed == true
+           PropertyChanges { target: shade; opacity: .4 }
+           PropertyChanges { target: shade; scale: 1.5 }
+           PropertyChanges { target: button; z: 1 }
+       },
+
+       State {
+           name: "toggled"
+           when: calcwindow.displayOperation == button.operation && button.togglable
+           PropertyChanges { target: shade; opacity: .6 }
+           PropertyChanges { target: shade; scale: 1.8 }
+       }
+    ]
+
+    transitions: [
         Transition {
             from: ""
             to: "pressed"
             NumberAnimation {
-               properties: "z,scale";
-               easing.type: Easing.OutExpo;
-               duration: 50
+                properties: "z,scale";
+                easing.type: Easing.OutExpo;
+                duration: 50
             }
             NumberAnimation {
                properties: "opacity";
@@ -133,6 +133,6 @@
                duration: 300
             }
         }
-     ]
- }
+    ]
+}
 
