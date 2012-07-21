@@ -53,13 +53,13 @@ Item {
     Text {
         id: buttonText
         anchors.centerIn: parent; anchors.verticalCenterOffset: -1
-        font.pixelSize: parent.width > parent.height ? parent.height * .5 : parent.width * .5
+        font.pixelSize: parent.width > parent.height ? parent.height * .6 : parent.width * .6
         style: Text.Sunken; color: "white"; styleColor: Qt.lighter(color, 1.2); smooth: true
 
         Rectangle {
             id: shade
             anchors.centerIn: parent;
-            width: (parent.width > parent.height) ? parent.width : parent.height
+            width: Math.max(parent.width, parent.height)
             height: width
             radius: 20; color: "#63B8FF"; opacity: 0
         }
@@ -86,7 +86,7 @@ Item {
            name: "toggled"
            when: calcwindow.displayOperation == button.operation && button.togglable
            PropertyChanges { target: shade; opacity: .6 }
-           PropertyChanges { target: shade; scale: 1.8 }
+           PropertyChanges { target: shade; scale: 1.5 }
        }
     ]
 
