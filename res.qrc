@@ -3,6 +3,7 @@
         <file>CalcButton.qml</file>
         <file>Display.qml</file>
         <file>main.qml</file>
+        <file>HistoryDisplay.qml</file>
     </qresource>
     <qresource prefix="/js">
         <file>calculator.js</file>
