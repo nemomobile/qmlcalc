@@ -25,7 +25,7 @@ var currentOperation = ""
  }
 
  function doOperation(op) {
-     if (disabled(op)) {
+	 if (disabled(op)) {
          return
      }
 
