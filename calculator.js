@@ -25,7 +25,6 @@ var currentOperation = ""
  }
 
  function doOperation(op) {
-     console.log("Called with " + op)
      if (disabled(op)) {
          return
      }
