@@ -25,9 +25,7 @@ var currentOperation = ""
  }
 
  function doOperation(op) {
-     //comment next line to stop it from output debug message, bug 405
-     //console.log("Called with " + op)
-     if (disabled(op)) {
+          if (disabled(op)) {
          return
      }
 
