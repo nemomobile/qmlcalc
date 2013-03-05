@@ -1,0 +1,23 @@
+Name: qmlcalc
+Summary: MeeGo QML Harmattan-esque calculator
+Version: 0.1.0
+Release: 1
+Group: Applications/System
+License: LGPL v2.1
+URL: http://github.com/nemomobile/qmlcalc
+Sources:
+    - "%{name}-%{version}.tar.bz2"
+Description: |
+    Calculator application written using QML
+
+PkgConfigBR:
+    - x11
+    - QtDeclarative
+    - QtGui
+    - qdeclarative-boostable
+Configure: none
+Builder: qmake
+Files:
+    - "%{_bindir}/qmlcalc"
+    - "%{_datadir}/applications/qmlcalc.desktop"
+
