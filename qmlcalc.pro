@@ -19,7 +19,8 @@ OTHER_FILES += \
     calculator.js \
     main.qml \
     Display.qml \
-    CalcButton.qml
+    CalcButton.qml \
+    HistoryDisplay.qml
 
 
 target.path = /usr/bin
