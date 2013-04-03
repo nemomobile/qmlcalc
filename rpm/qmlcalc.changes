@@ -1,0 +1,30 @@
+* Wed Mar 06 2013 Robin Burchell <robin+mer@viroteck.net> - 0.1.1
+- Fixes: NEMO#591 - Landscape mode stopped working
+
+* Thu Nov 15 2012 John Brooks <john.brooks@jollamobile.com> - 0.1.0
+- Add proper qdeclarative-boostable support
+
+* Thu Aug 9 2012 Olli Kasari <sviox@hotmail.com> - 0.0.9
+- Fixes: NEMO#219 - Pressing calculator icon on homescreen should not open multiple calculator instances.
+
+* Sat Jul 21 2012 Robin Burchell <robin+mer@viroteck.net> - 0.0.9
+- Fixes: NEMO#216 - Calculator needs a landscape layout
+- Replaces .yaml removed accidentally
+
+* Wed Nov 23 2011 Robin Burchell <robin+nemo@viroteck.net> - 0.0.8
+- Bump to latest version
+- Fixes visual flicker
+
+* Thu Nov 17 2011 w00t <robin+mer@viroteck.net> - 0.0.7
+- Bump to latest version
+- Removes some spammy debug output
+- Removes the close button, now the gestures plugin is integrated
+
+* Mon Sep 26 2011 w00t <robin+meego@viroteck.net> - 0.0.6
+- Fixes: improve transitions on button press
+- Fixes: BMC#23181 - [CE] Calculator: Unable to see last digits of the number.
+- Fixes: match every other calculator in the world in terms of number layout
+
+* Mon Sep 19 2011 w00t <robin+meego@viroteck.net> - 0.0.5
+- initial submit of qmlcalc from https://github.com/rburchell/qmlcalc
+
