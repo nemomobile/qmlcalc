@@ -81,14 +81,21 @@ Item {
         }
     }
 
-    CalcButton {
+    Image {
         id: leftArrowButton
-        width: height;
-        height: parent.height * 0.6;
-        color: '#888888'; operation: CalcEngine.leftArrow
+        source: "image://theme/icon-m-common-backspace"
+
         anchors {
             right: parent.right; rightMargin: 6
-            verticalCenter: parent.verticalCenter; verticalCenterOffset: -1
+            verticalCenter: parent.verticalCenter;
+            verticalCenterOffset: -1
+        }
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                doOp(CalcEngine.leftArrow)
+            }
         }
     }
 }
