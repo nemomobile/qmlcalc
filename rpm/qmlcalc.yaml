@@ -15,6 +15,11 @@ PkgConfigBR:
     - QtDeclarative
     - QtGui
     - qdeclarative-boostable
+
+Requires:
+    - qt-components
+    - mapplauncherd-booster-qtcomponents
+
 Configure: none
 Builder: qmake
 Files:
