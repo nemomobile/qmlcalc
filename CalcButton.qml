@@ -41,14 +41,12 @@
 
 import QtQuick 1.1
 
-Item {
+MouseArea {
     id: button
 
     property alias operation: buttonText.text
     property alias color: buttonText.color
     property bool togglable: false
-
-    signal clicked
 
     Text {
         id: buttonText
@@ -65,18 +63,13 @@ Item {
         }
     }
 
-    MouseArea {
-        id: mouseArea
-        anchors.fill: parent
-        onClicked: {
-            doOp(operation)
-            button.clicked()
-        }
+    onClicked: {
+        doOp(operation)
     }
 
     states: [
        State {
-           name: "pressed"; when: mouseArea.pressed == true
+           name: "pressed"; when: button.pressed == true
            PropertyChanges { target: shade; opacity: .4 }
            PropertyChanges { target: shade; scale: 1.5 }
            PropertyChanges { target: button; z: 1 }
