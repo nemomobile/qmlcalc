@@ -58,7 +58,7 @@ Item {
             bottom: parent.bottom
         }
 
-        property int minimumSize: 8
+        property int minimumSize: 42
 
         onWidthChanged: refitText()
         onHeightChanged: refitText()
@@ -75,6 +75,13 @@ Item {
 
             while (paintedWidth < width && paintedHeight < height) {
                 font.pixelSize++
+
+            }
+
+            // sanity cap
+            if (font.pixelSize >= 120) {
+                font.pixelSize = 120
+                return
             }
 
             font.pixelSize--
