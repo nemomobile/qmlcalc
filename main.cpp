@@ -5,6 +5,9 @@
 #ifdef HAS_BOOSTER
 #include <MDeclarativeCache>
 #endif
+#include <QtDeclarative>
+
+#include "calcengine.h"
 
 Q_DECL_EXPORT int main(int argc, char **argv)
 {
@@ -24,5 +27,10 @@ Q_DECL_EXPORT int main(int argc, char **argv)
 
     view->setSource(QUrl("qrc:/qml/main.qml"));
     view->showFullScreen();
+
+    CalcEngine* calcEng = new CalcEngine();
+    QDeclarativeContext* rootContext = view->rootContext();
+    rootContext->setContextProperty("calcOpEngine", calcEng);
+
     return a->exec();
 }

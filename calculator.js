@@ -54,14 +54,13 @@ function disabled(op) {
     }
 
     if (currentOperation == "+") {
-        currentText = Number(currentText.valueOf()) + Number(lastText.valueOf())
+        currentText = calcOpEngine.doCalcOp("+", lastText, currentText)
     } else if (currentOperation == "-") {
-        currentText = Number(lastText.valueOf()) - Number(currentText.valueOf())
+        currentText = calcOpEngine.doCalcOp("-", lastText, currentText)
     } else if (currentOperation == multiplication) {
-        currentText = Number(lastText.valueOf()) * Number(currentText.valueOf())
+        currentText = calcOpEngine.doCalcOp("*", lastText, currentText)
     } else if (currentOperation == division) {
-        currentText = Number(Number(lastText.valueOf()) /
-                Number(currentText.valueOf())).toString()
+        currentText = calcOpEngine.doCalcOp("/", lastText, currentText)
     } else if (currentOperation == "=") {
     }
 
