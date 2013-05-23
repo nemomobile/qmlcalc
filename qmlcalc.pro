@@ -10,7 +10,8 @@ DEPENDPATH += .
 INCLUDEPATH += .
 
 # Input
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    calcengine.cpp
 
 RESOURCES += \
     res.qrc
@@ -38,3 +39,6 @@ packagesExist(qdeclarative-boostable) {
 } else {
     warning("qdeclarative-boostable not available; startup times will be slower")
 }
+
+HEADERS += \
+    calcengine.h
