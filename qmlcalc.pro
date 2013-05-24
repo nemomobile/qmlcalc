@@ -10,7 +10,8 @@ DEPENDPATH += .
 INCLUDEPATH += .
 
 # Input
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    calcengine.cpp
 
 RESOURCES += \
     res.qrc
@@ -30,7 +31,8 @@ desktop.path = /usr/share/applications
 desktop.files = qmlcalc.desktop
 INSTALLS += desktop
 
-CONFIG += link_pkgconfig
+CONFIG += link_pkgconfig \
+    console
 packagesExist(qdeclarative-boostable) {
     message("Building with qdeclarative-boostable support")
     DEFINES += HAS_BOOSTER
@@ -38,3 +40,6 @@ packagesExist(qdeclarative-boostable) {
 } else {
     warning("qdeclarative-boostable not available; startup times will be slower")
 }
+
+HEADERS += \
+    calcengine.h
