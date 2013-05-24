@@ -31,7 +31,8 @@ desktop.path = /usr/share/applications
 desktop.files = qmlcalc.desktop
 INSTALLS += desktop
 
-CONFIG += link_pkgconfig
+CONFIG += link_pkgconfig \
+    console
 packagesExist(qdeclarative-boostable) {
     message("Building with qdeclarative-boostable support")
     DEFINES += HAS_BOOSTER

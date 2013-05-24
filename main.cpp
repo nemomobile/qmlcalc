@@ -28,9 +28,10 @@ Q_DECL_EXPORT int main(int argc, char **argv)
     view->setSource(QUrl("qrc:/qml/main.qml"));
     view->showFullScreen();
 
-    CalcEngine* calcEng = new CalcEngine();
+
+    CalcEngine calcEng(0); // Argument passed to suppress a compiler warning
     QDeclarativeContext* rootContext = view->rootContext();
-    rootContext->setContextProperty("calcOpEngine", calcEng);
+    rootContext->setContextProperty("calcOpEngine", &calcEng);
 
     return a->exec();
 }
