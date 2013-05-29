@@ -65,7 +65,7 @@ function disabled(op) {
         currentText = parseFloat(currentText.toPrecision(floatPrecision))
     } else if (currentOperation == division) {
         currentText = Number(Number(lastText.valueOf()) /
-                Number(currentText.valueOf())).toString()
+                Number(currentText.valueOf()))
         currentText = parseFloat(currentText.toPrecision(floatPrecision))
     } else if (currentOperation == "=") {
     }
