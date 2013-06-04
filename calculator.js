@@ -8,6 +8,7 @@ var plusminus = "\u00b1"
 
 var currentText = "0"
 var lastText = ""
+var floatPrecision = 13
 // currentOperation
 
 var memory = 0
@@ -55,13 +56,17 @@ function disabled(op) {
 
     if (currentOperation == "+") {
         currentText = Number(currentText.valueOf()) + Number(lastText.valueOf())
+        currentText = parseFloat(currentText.toPrecision(floatPrecision))
     } else if (currentOperation == "-") {
         currentText = Number(lastText.valueOf()) - Number(currentText.valueOf())
+        currentText = parseFloat(currentText.toPrecision(floatPrecision))
     } else if (currentOperation == multiplication) {
         currentText = Number(lastText.valueOf()) * Number(currentText.valueOf())
+        currentText = parseFloat(currentText.toPrecision(floatPrecision))
     } else if (currentOperation == division) {
         currentText = Number(Number(lastText.valueOf()) /
-                Number(currentText.valueOf())).toString()
+                Number(currentText.valueOf()))
+        currentText = parseFloat(currentText.toPrecision(floatPrecision))
     } else if (currentOperation == "=") {
     }
 
