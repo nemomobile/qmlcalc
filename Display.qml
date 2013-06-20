@@ -45,7 +45,7 @@ import "qrc:/js/calculator.js" as CalcEngine
 Item {
     Text {
         id: displayText
-        text: calcwindow.displayText.length > 0 ? calcwindow.displayText : calcwindow.previousText
+        text: calcwindow.displayText.length > 0 ? calcwindow.displayText : calcwindow.displayPrevious
         color: "#FF8600"; smooth: true; font.bold: true
         Component.onCompleted: refitText()
         horizontalAlignment: Text.AlignRight;
