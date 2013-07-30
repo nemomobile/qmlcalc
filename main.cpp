@@ -1,6 +1,6 @@
-#include <QDeclarativeView>
-#include <QDeclarativeEngine>
-#include <QApplication>
+#include <QQuickView>
+#include <QQmlEngine>
+#include <QGuiApplication>
 
 #ifdef HAS_BOOSTER
 #include <MDeclarativeCache>
@@ -9,20 +9,17 @@
 Q_DECL_EXPORT int main(int argc, char **argv)
 {
 #ifdef HAS_BOOSTER
-    QScopedPointer<QApplication> a(MDeclarativeCache::qApplication(argc, argv));
-    QScopedPointer<QDeclarativeView> view(MDeclarativeCache::qDeclarativeView());
+    QScopedPointer<QGuiApplication> a(MDeclarativeCache::qApplication(argc, argv));
+    QScopedPointer<QQuickView> view(MDeclarativeCache::qQuickView());
 #else
-    QScopedPointer<QApplication> a(new QApplication(argc, argv));
-    QScopedPointer<QDeclarativeView> view(new QDeclarativeView);
+    QScopedPointer<QGuiApplication> a(new QGuiApplication(argc, argv));
+    QScopedPointer<QQuickView> view(new QQuickView);
 #endif
 
     QObject::connect(view->engine(), SIGNAL(quit()), a.data(), SLOT(quit()));
-    view->setAttribute(Qt::WA_OpaquePaintEvent);
-    view->setAttribute(Qt::WA_NoSystemBackground);
-    view->viewport()->setAttribute(Qt::WA_OpaquePaintEvent);
-    view->viewport()->setAttribute(Qt::WA_NoSystemBackground);
 
-    view->setSource(QUrl("qrc:/qml/main.qml"));
+
+    view->setSource(QUrl("/usr/share/qmlcalc/main.qml"));
     view->showFullScreen();
     return a->exec();
 }

@@ -2,6 +2,6 @@
 Type=Application
 Name=Calculator
 Categories=Applications
-Exec=invoker --type=qtcomponents -s /usr/bin/qmlcalc
+Exec=invoker --type=qtcomponents-qt5 -s /usr/bin/qmlcalc
 Icon=icon-l-calculator
 
