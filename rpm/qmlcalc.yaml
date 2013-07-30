@@ -11,18 +11,18 @@ Description: |
     Calculator application written using QML
 
 PkgConfigBR:
-    - x11
-    - QtDeclarative
-    - QtGui
-    - qdeclarative-boostable
+    - Qt5Core
+    - Qt5Quick
+    - Qt5Qml
+    - qdeclarative5-boostable
 
 Requires:
-    - qt-components
-    - mapplauncherd-booster-qtcomponents
+    - qt-components-qt5
+    - mapplauncherd-booster-qtcomponents-qt5
 
 Configure: none
-Builder: qmake
+Builder: qmake5
 Files:
     - "%{_bindir}/qmlcalc"
     - "%{_datadir}/applications/qmlcalc.desktop"
-
+    - "%{_datadir}/qmlcalc/*"

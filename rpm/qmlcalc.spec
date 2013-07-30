@@ -16,12 +16,12 @@ License:    LGPL v2.1
 URL:        http://github.com/nemomobile/qmlcalc
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  qmlcalc.yaml
-Requires:   qt-components
-Requires:   mapplauncherd-booster-qtcomponents
-BuildRequires:  pkgconfig(x11)
-BuildRequires:  pkgconfig(QtDeclarative)
-BuildRequires:  pkgconfig(QtGui)
-BuildRequires:  pkgconfig(qdeclarative-boostable)
+Requires:   qt-components-qt5
+Requires:   mapplauncherd-booster-qtcomponents-qt5
+BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5Quick)
+BuildRequires:  pkgconfig(Qt5Qml)
+BuildRequires:  pkgconfig(qdeclarative5-boostable)
 BuildRequires:  desktop-file-utils
 
 %description
@@ -38,7 +38,7 @@ Calculator application written using QML
 # >> build pre
 # << build pre
 
-%qmake 
+%qmake5 
 
 make %{?jobs:-j%jobs}
 
@@ -62,5 +62,6 @@ desktop-file-install --delete-original       \
 %defattr(-,root,root,-)
 %{_bindir}/qmlcalc
 %{_datadir}/applications/qmlcalc.desktop
+%{_datadir}/qmlcalc/*
 # >> files
 # << files
