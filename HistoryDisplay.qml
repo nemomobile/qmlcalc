@@ -1,5 +1,5 @@
-import QtQuick 1.1
-import "qrc:/js/calculator.js" as CalcEngine
+import QtQuick 2.0
+import "calculator.js" as CalcEngine
 
 Flickable {
     id: scrollArea
